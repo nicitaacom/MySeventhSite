@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../fonts/Poppins-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nerd-reuglar';
+  src: url('../fonts/Nerd-regular.woff2') format('woff2'),
+  url('../fonts/Nerd-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Settings */
+body {
+  background-color:#202020;
+  color:#ffffff;
+  font-size: 16px;
+}
+/* Colors */
+@text-white:#ffffff;
+@form:rgba(42,167,192,1);
+@form-hover:rgba(42,167,192,0.8);
+@form-opacity:rgba(42,167,192,0.6);
+
+
+
+
+
+
+
+ul {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display: flex;
+  background-color: #505050;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 5px #000000;
+  overflow: hidden;
+  li {
+    list-style: none;
+    width: 150px;
+    transition: 0.2s;
+    a {
+      display: block;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      transition: 0.5s;
+      text-decoration: none;
+    }
+  }
+  .active {
+    background-color: #dddd00;
+    transition: 0.2s;
+  }
+}

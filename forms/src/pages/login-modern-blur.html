@@ -1,0 +1,131 @@
+<!-- Tasks
+1.fix bug when pop-up resizing when inspector is opened -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form-modern-blur</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.svg">
+	<!-- for checkbox -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<!-- for input -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- Bootstrap.css -->
+	<link rel="stylesheet" href="../libraries/bootstrap/css/bootstrap.min.css">
+	<script defer src="../libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- for checkbox -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<!-- reset.css -->
+	<link rel="stylesheet" href="../libraries/reset/reset.css">
+	<!-- css js -->
+	<link rel="stylesheet" type="text/css" href="../styles/css/login-modern-blur.css">
+	<script defer src="../js/login-modern-blur.js"></script>
+</head>
+
+<body>
+
+
+	<main>
+
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-md mb-5">
+			<div class="container-xxl">
+				<a class="navbar-brand" href="#intro">
+					<span class="fw-bold text-dark ms-5 h1 text-white">
+						Logo
+					</span>
+				</a>
+				<!-- toggle button for mobile nav -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- navbar links -->
+
+				<div class="navbar_links me-5">
+					<ul class="d-flex gap-5">
+						<li><a class="active" href="#">Blur</a></li>
+						<li><a href="login-modern.html">Modern</a></li>
+						<li><a href="team2-form.html">Gmail</a></li>
+						<li><a href="login-hack.html">Hack</a></li>
+						<li><button class="button-pop-up" href="#">Sign in</button></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Form -->
+		<div class="container">
+			<span class="icon-close"><i class='bx bx-x'></i></span>
+
+			<form class="form form-login active">
+				<div class="form_header">
+					<h1>Sign in</h1>
+				</div>
+
+				<div class="form_body">
+					<div class="input">
+						<input type="login" required>
+
+						<label for="login">Login</label>
+						<i class='bx bx-user'></i>
+					</div>
+					<div class="input">
+						<input type="password" required>
+						<label for="password">Password</label>
+						<i class='bx bx-lock-alt'></i>
+					</div>
+					<div class="login_body_options">
+						<div class="remember_me">
+							<input type="checkbox" id="check" checked>
+							<label for="rememberMe"><span>Remember me</span></label>
+						</div>
+						<div class="forgotPassowrd">
+							<a href="#">Forgot password?</a>
+						</div>
+					</div>
+					<button class="button">Login</button>
+					<div class="sign">
+						<p for="signup">Don't have an account?</p> <a class="button-register" href="#">Sign up</a>
+					</div>
+				</div>
+			</form>
+
+			<form class="form form-register">
+
+				<div class="form_header">
+					<h1>Sign up</h1>
+				</div>
+
+				<div class="form_body">
+					<div class="input">
+						<input type="login" required>
+						<label for="login">Login</label>
+						<i class='bx bx-user'></i>
+					</div>
+					<div class="input">
+						<input type="password" required>
+						<label for="password">Password</label>
+						<i class='bx bx-lock-alt'></i>
+					</div>
+					<div class="login_body_options">
+						<div class="agree">
+							<input type="checkbox" id="check" checked>
+							<p>I agree with <a href="#">terms & conditions</a></p>
+						</div>
+					</div>
+					<button class="button">Register</button>
+					<div class="sign">
+						<p for="signin">Already have an account?</p> <a class="button-login" href="#">Sign in</a>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+	</main>
+
+
+</body>
+</html>

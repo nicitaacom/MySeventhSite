@@ -1,0 +1,140 @@
+.containerForm {
+	width: 25%;
+	display: flex;
+	flex-flow:column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.form {
+	width: 100%;
+	display: inline-flex;
+	flex-flow: column;
+	justify-content: center;
+	margin:0 auto 100px;
+	.form_header {
+		.headerTitle {
+			font-size: 22px;
+			font-weight: 700;
+		}
+		margin-bottom: 20px;
+	}
+	.form_body {
+		width: 100%;
+		.button {
+			width: 100%;
+			margin-bottom: 5px;
+			font-weight: 800;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Other */
+//input
+.input {
+	margin: auto;
+	margin-bottom: 10px;
+	position:relative;
+	input {
+		box-sizing: border-box;
+		width: 100%;
+		color:@form-text;
+		background-color: transparent;
+		border-radius:16px;
+		border:none;
+		border:1px solid @form;
+		height: 35px;
+		padding: 6px 10px 5px 14px;
+	}
+	input:focus {
+		outline:none;
+	}
+}
+
+//loginBodyHelp
+.login_body_help {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	.remember_me,.agree {
+		display: flex;
+		color:@form;
+	}
+}
+//checkbox
+input[type="checkbox"] {
+	appearance:none;
+	outline: none;
+	-webkit-appearance:0;
+	height:15px;
+	width: 15px;
+	margin:0px 5px 0px 3px;
+	border-radius:2px;
+	box-shadow:1px 1px 3px rgba(0,0,0,1);
+	// To set checked at center
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type="checkbox"]::after {
+	content:"\ea41";
+	font-family: "boxicons";
+	font-weight: 900;
+	font-size:14px;
+	color:@text-white;
+}
+input[type="checkbox"]:not(:checked)::after {
+	display: none;
+}
+input[type="checkbox"]:not(:checked) {
+	background-color:  @form;
+}
+input[type="checkbox"]:not(:checked):hover {
+	background-color:  @form-hover;
+}
+input[type="checkbox"]:not(:checked):active {
+	background-color:  @form-opacity;
+}
+input[type="checkbox"]:checked {
+	background-color: @form-opacity;
+}
+input[type="checkbox"]:checked:hover {
+	background-color: @form-hover;
+}
+input[type="checkbox"]:checked:active {
+	background-color: @form;
+}
+input[type="checkbox"]:checked::after {
+	display: flex;
+}
+.forgotPassword {
+	display: flex;
+	flex-flow: column;
+	text-align: right;
+	a {
+		color:@form;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline 0.5px;
+	}
+}

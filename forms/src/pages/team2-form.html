@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Team2 support</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.svg">
+	<!-- for checkbox -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<!-- for inputs -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<!-- smtp.js -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<!-- reset.css -->
+	<link rel="stylesheet" href="../libraries/reset/reset.css">
+	<!-- css js -->
+	<link rel="stylesheet" type="text/css" href="../styles/css/team2-form.css">
+	<script defer src="../js/team2-form.js"></script>
+</head>
+<body>
+
+	<main>
+
+		<div class="containerNavbar">
+			<nav>	
+				<div class="navbarTitle align-middle">Go trip</div>
+				<div class="navbarLinks">
+					<ul>
+						<li><a href="login-modern-blur.html">Blur</a></li>
+						<li><a href="login-modern.html">Modern</a></li>
+						<li><a class="active" href="team2-form.html">Gmail</a></li>
+						<li><a href="login-hack.html">Hack</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul class="auth">
+						<li><a href="#">Sign up</a></li>
+						<li><button class="button" href="#">Login</button></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+
+		<!-- Form -->
+		<div class="container">
+			
+			<div class="authMetod">
+				<ul>
+					<li data-key="login" class="buttonAuth active">Отпарвить жалобу</li>
+					<li data-key="register" class="buttonAuth">Feedback</li>
+				</ul>
+			</div>
+
+			<form class="form form-login active" onsubmit="sendReport(); reset(); return false">
+
+				<div class="form_header">
+					<h1>Team #2 support</h1>
+				</div>
+				<div class="form_body">
+					<div class="input">
+						<input type="login" id="discord-login" placeholder="Discrod" required>
+						<i class='bx bxl-discord-alt tooltip'>
+							<span class="tooltiptext">yourdiscord#1337</span>
+						</i>
+					</div>
+					<div class="input">
+						<textarea id="message-login" rows="10" placeholder="discord (nickname) делал вот это... - предлагаю наказание в виде...
+
+						демка - сслыка на демку
+
+						тик/раунд/видео - demo_goto 1000/раунд 8/ссылка на видео" required></textarea>
+					</div>
+					<button onclick="location.href='#'" type="submit" class="button button-login">Подать жалобу</button>
+				</div>
+
+			</form>
+
+			<form class="form form-register" onsubmit="sendFeedback(); reset(); return false">
+
+				<div class="form_header">
+					<h1>Team #2 Feedback</h1>
+				</div>
+				<div class="form_body">
+					<div class="input">
+						<input type="login" id="discord-register" placeholder="Discrod" required>
+						<i class='bx bxl-discord-alt tooltip'>
+							<span class="tooltiptext">yourdiscord#1337</span>
+						</i>
+					</div>
+					<div class="input">
+						<textarea id="message-register" rows="10" placeholder="Добавить/убрать... чтобы..." required></textarea>
+					</div>
+					<button onclick="location.href='#'" type="submit" class="button button-login">Улучшить Team #2</button>
+				</div>
+
+			</form>
+
+		</div>
+	</main>
+
+</body>
+</html>

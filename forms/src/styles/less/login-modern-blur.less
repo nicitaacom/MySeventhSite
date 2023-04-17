@@ -1,0 +1,394 @@
+@font-face {
+	font-family: 'Nerd-reg';
+	src: url('../../../assets/fonts/Nerd-regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppnis-bold';
+	src: url('../../../assets/fonts/Poppins-bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/* Global Settings */
+body {
+	background-color:#202020;
+	color:#ffffff;
+	font-size: 16px;
+	font-family: '', sans-serif;
+}
+
+/* Colors */
+@navbar-text:#ffffff;
+@navbar-hover:rgba(228, 237, 242,0.6);
+
+@form:rgba(71,100,108,1);
+@form-hover:rgba(71,100,108,0.8);
+@form-opacity:rgba(71,100,108,0.6);
+@form-text:#ffffff;
+
+
+
+/* Text */
+.bold() {
+	font-family: 'Poppnis-bold',sans-serif;
+	font-weight: bold;
+}
+
+
+
+
+/* forms buttons etc */
+.button {
+	border-radius:4px;
+	border:none;
+	color:#ffffff;
+	font-size: 16px;
+	font-weight: 500;
+	padding:16px;
+}
+.footer {
+	margin:0 auto 0;
+	padding:30px 10%;
+}
+
+/* variants for forms buttons etc*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+	min-height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(../../../assets/img/background.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* Navbar */
+	nav {
+		ul {
+			list-style: none;
+			padding-left: 0%;
+			margin-bottom: 0%;
+		}
+		a {
+			color:@navbar-text;
+			text-decoration: none;
+			font-size: 18px;
+		}
+		a:hover {
+			color:@navbar-text;
+		}
+		.navbar_links {
+			ul {
+				align-items:center;
+			}
+			/*underline on hover*/
+			a {
+				position: relative;
+			}
+			a::before {
+				transform-origin: 100%;
+			}
+			a::after {
+				content:'';
+				display: block;
+				width: 60%;
+				height:3px;
+				border-radius:12px;
+				transform:scaleX(0);
+				transform-origin:0%;
+				background-color:#c4c4c4;
+				transition:all 0.4s;
+			}
+			a:hover::after,
+			a.active::after {
+				transform:scaleX(1);
+			}
+			button {
+				color:@navbar-text;
+				padding: 15px 40px;
+				background-color: transparent;
+				border:1px solid #e4edf2;
+				border-radius:12px;
+				transition:all 0.4s;
+				.bold;
+			}
+			button:hover {
+				background-color: @navbar-hover;
+				transition:all 0.4s;
+			}
+		}  
+	}
+
+	/* Form */
+	.container {
+		display: flex;
+		border:2px solid @form-opacity;
+		min-height:60vh;
+		justify-content: center;
+		align-items:center;
+		overflow: hidden;
+		background:transparent;
+		backdrop-filter:blur(20px);
+		width:30%;
+		height:auto;
+		border-radius:16px;
+		transform:scale(0);
+		transition:transform 0.4s ease;
+		}
+		.active {
+		transform:scale(1);
+		}
+		.icon-close {
+			color:@form-text;
+			background-color: @form;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			border-bottom-left-radius:16px;
+			cursor: pointer;
+		}
+		form {
+			flex-direction: column;
+			padding:4% 2%;
+			width:90%;
+			.form_header {
+				text-align: center;
+				h1 {
+					font-size: 32px;
+					margin-bottom: 20px;
+					color:@form;
+					.bold;
+				}
+			}
+
+			.form_body {
+				.input {
+					margin-bottom: 10px;
+					position:relative;
+					input {
+						width: 100%;
+						color:@form-text;
+						background-color: transparent;
+						border-radius:16px;
+						border:none;
+						border-bottom:3px solid @form;
+						height: 45px;
+						padding: 6px 10px 5px 14px;
+					}
+
+					input:focus {
+						outline:none;
+					}
+					//for label up on focus
+					input:focus~label,
+					input:valid~label {
+						transition: all 0.4s;
+						top: 0;
+					}
+					label {
+						position: absolute;
+						top: 50%;
+						transform:translateY(-50%);
+						left:4%;
+						font-size: 16px;
+						pointer-events: none;
+						transition: all 0.6s;
+					}
+					i {
+						color:@form;
+						position: absolute;
+						top: 50%;
+						transform:translateY(-50%);
+						right: 12px;
+						font-size: 20px;
+					}
+				}
+				.login_body_options {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 30px;
+					.remember_me,.agree {
+						display: flex;
+						color:@form;
+					}
+					input[type="checkbox"] {
+						appearance:none;
+						outline: none;
+						-webkit-appearance:0;
+						height:15px;
+						width: 15px;
+						margin:0px 5px 0px 3px;
+						border-radius:2px;
+						box-shadow:1px 1px 3px rgba(0,0,0,1);
+						  // To set checked at center
+						  display: flex;
+						  justify-content: center;
+						  align-items: center;
+						}
+						
+						input[type="checkbox"]::after {
+							content:"\f00c";
+							font-family: "Font awesome 5 Free";
+							font-weight: 900;
+							font-size:14px;
+							color:#000000;
+						}
+						input[type="checkbox"]:not(:checked)::after {
+							display: none;
+						}
+						input[type="checkbox"]:not(:checked) {
+							background-color:  @form;
+						}
+						input[type="checkbox"]:not(:checked):hover {
+							background-color:  @form-hover;
+						}
+						input[type="checkbox"]:not(:checked):active {
+							background-color:  @form-opacity;
+						}
+						input[type="checkbox"]:checked {
+							background-color: @form-opacity;
+						}
+						input[type="checkbox"]:checked:hover {
+							background-color: @form-hover;
+						}
+						input[type="checkbox"]:checked:active {
+							background-color: @form;
+						}
+						input[type="checkbox"]:checked::after {
+							display: flex;
+						}
+						//Forgot password?
+						a {
+							color:@form;
+							text-decoration: none;
+						}
+						a:hover {
+							text-decoration: underline 0.5px;
+						}
+						.forgotPassowrd {
+							display: flex;
+							flex-flow: column;
+							text-align: right;
+							/*underline on hover*/
+							a {
+								color:@form;
+								position: relative;
+								text-decoration: none;
+							}
+							a::before {
+								transform-origin: 100%;
+							}
+							a::after {
+								content:'';
+								display: block;
+								width: 80%;
+								height:1px;
+								border-radius:12px;
+								transform:scaleX(0);
+								transform-origin:0%;
+								background-color:@form;
+								transition:all 0.4s;
+							}
+							a:hover::after,
+							a.active::after {
+								transform:scaleX(1);
+							}
+						}
+					}
+					
+				}
+				button {
+					color:@form-text;
+					background-color: @form;
+					width: 100%;
+					margin: 0px auto 10px;
+					border-radius: 16px;
+					transition: all 0.4s;
+					.bold;
+				}
+				button:hover {
+					transition: all 0.4s;
+					background-color: @form-hover;
+					box-shadow: 1px 1px 5px rgba(0,0,0,1);
+				}
+				.sign {
+					display: flex;
+					justify-content: center;
+					gap:5px;
+					a {
+						color:@form;
+						text-decoration: none;
+						.bold;
+					}
+					/*underline on hover*/
+					a {
+						position: relative;
+					}
+					a::before {
+						transform-origin: 100%;
+					}
+					a::after {
+						content:'';
+						display: block;
+						width: 80%;
+						height:1px;
+						border-radius:12px;
+						transform:scaleX(0);
+						transform-origin:0%;
+						background-color:@form;
+						transition:all 0.4s;
+					}
+					a:hover::after,
+					a.active::after {
+						transform:scaleX(1);
+					}
+				}
+			}
+		}
+		.form-register {
+			position: absolute;
+			transform:translateX(400px);
+			transition:all 0.2s;
+		}
+		.form-register.active {
+			position: absolute;
+			transform:translateX(0px);
+			transition:all 0.2s;
+		}
+		.form-login {
+			position: absolute;
+			transform:translateX(-400px);
+			transition:all 0.2s;
+		}
+		.form-login.active {
+			position: absolute;
+			transform:translateX(0px);
+			transition:all 0.2s;
+		}
+	

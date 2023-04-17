@@ -1,0 +1,275 @@
+/* Global Settings */
+body {
+  background-color: #202020;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* Colors */
+/* Text */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* forms buttons etc */
+.container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.containerNavbar {
+  max-width: 90%;
+  margin: auto;
+}
+.containerNavbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1%;
+  margin-bottom: 5%;
+  /*underline on hover*/
+}
+.containerNavbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0%;
+  margin-bottom: 0%;
+}
+.containerNavbar nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.containerNavbar nav a:hover {
+  color: #ffffff;
+}
+.containerNavbar nav .navbarTitle {
+  font-size: 1.2rem;
+}
+.containerNavbar nav .auth {
+  width: 150px;
+  height: 30px;
+}
+.containerNavbar nav a {
+  position: relative;
+}
+.containerNavbar nav a::before {
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+.containerNavbar nav a::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  border-radius: 16px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  background-color: #c4c4c4;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.containerNavbar nav a:hover::after,
+.containerNavbar nav a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #4986d6;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  -webkit-appearance: 0;
+  min-height: 13px;
+  min-width: 13px;
+  max-height: 13px;
+  max-width: 13px;
+  margin: 0px 5px 0px 3px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+input[type="checkbox"]::after {
+  content: "\ea41";
+  font-family: "boxicons";
+  font-size: 14px;
+  margin-right: 1px;
+  color: #ffffff;
+}
+input[type="checkbox"]:not(:checked)::after {
+  display: none;
+}
+input[type="checkbox"]:not(:checked) {
+  background-color: #7fa9d9;
+}
+input[type="checkbox"]:not(:checked):hover {
+  background-color: rgba(127, 169, 217, 0.8);
+}
+input[type="checkbox"]:not(:checked):active {
+  background-color: rgba(127, 169, 217, 0.6);
+}
+input[type="checkbox"]:checked {
+  background-color: rgba(127, 169, 217, 0.6);
+}
+input[type="checkbox"]:checked:hover {
+  background-color: rgba(127, 169, 217, 0.8);
+}
+input[type="checkbox"]:checked:active {
+  background-color: #7fa9d9;
+}
+input[type="checkbox"]:checked::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* variants for forms buttons etc*/
+main {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.form {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form_header {
+  width: 100%;
+  text-align: center;
+}
+.form_header p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.form_header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.form_body {
+  width: 100%;
+}
+.form_body .input {
+  position: relative;
+  margin-bottom: 10px;
+}
+.form_body .input input {
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  background-color: rgba(127, 169, 217, 0.4);
+  border: none;
+  border-radius: 12px;
+  padding: 4px 4px 4px 26px;
+  outline: none;
+}
+.form_body .input ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.form_body .input :-ms-input-placeholder {
+  color: #ffffff;
+}
+.form_body .input ::-ms-input-placeholder {
+  color: #ffffff;
+}
+.form_body .input ::placeholder {
+  color: #ffffff;
+}
+.form_body .input .bx {
+  position: absolute;
+  top: 10px;
+  left: 7px;
+}
+.form_body .button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.login_body_help {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.login_body_help .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

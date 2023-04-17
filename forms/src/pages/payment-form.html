@@ -1,0 +1,647 @@
+<!-- Tasks
+1.
+2.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Payment</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.svg">
+	<!-- box icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- css js -->
+	<link rel="stylesheet" type="text/css" href="../styles/css/payment-form.css">
+	<script defer src="../js/payment-form.js"></script>
+
+</head>
+<body>
+
+	
+	<main>
+		<div class="container">
+			<form class="form">
+
+				<h1 class="formHeader">Оформление заказа</h1>
+
+				<div class="order">
+					<div class="orderHeader">
+						<h2 class="orderDigit">Заказ №n</h2>
+						<p class="orderTotalSum">На сумму:n nnn <span class="currency"></span></p>
+					</div>
+					<div class="orderBody">
+						<div class="product">
+							<div class="stepHeader">
+								<span class="step stepHeader_step">n</span>
+								<p class="text-16-white">Товары продавца n</p>
+								<a class="buttonEdit" href="#pop-up">
+									<i class='bx bx-edit-alt'></i>
+									Редактировать
+								</a>
+							</div>
+							<div class="productInfo">
+								<div class="productInfo_img">
+									<img src="https://content.rozetka.com.ua/goods/images/preview/306561907.jpg" alt="Женские туфли Mango">
+								</div>
+								<div class="productInfo_name">
+									<a href="#">Женские туфли Mango</a>
+								</div>
+								<div class="productInfo_pice">
+									<div class="price_option">
+										<dt>Цена</dt>
+										<dd>
+											<span class="price">n nnn <span class="currency"></span></span>
+											<span class="priceOld">n nnn <span class="currency"></span></span>
+										</dd>
+									</div>
+									<div class="price_option">
+										<dt>Количество</dt>
+										<dd>1</dd>
+									</div>
+									<div class="price_option">
+										<dt>Сумма</dt>
+										<dd>
+											<span class="price_total">n nnn <span class="currency"></span></span>
+										</dd>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="product">
+							<div class="stepHeader">
+								<span class="step stepHeader_step">n</span>
+								<p class="text-16-white">Доставка</p>
+							</div>
+							<button class="buttonTransparent">
+								<i class='bx bxs-map'></i>
+								<div class="info">
+									<p class="delivery_city_label text-12-gray">Ваш город</p>
+									<p class="text-14-white">Котюжины</p>
+									<p class="text-12-gray">Тернопольская обл., Тернопольский р-н.</p>
+								</div>
+								<i class='bx bxs-chevron-right'></i>
+							</button>
+
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<ul class="radioVariants">
+								<li class="variant variant-active">
+									<div class="radioVariant">
+										<input type="radio" id="delivery_way1" name="radio-group1" checked>
+										<label for="delivery_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Самовывоз из наших магазинов</p>
+												<p class="text-12-gray">Забрать завтра с</p>
+											</div>
+											<p class="deliveryPrice free">Бесплатно</p>
+										</div>
+									</div>
+									<div class="variant_content visible">
+										<nav class="dropdown">
+											<label for="touch"><span>Выберите подходящее отделение</span></label>            
+											<input type="checkbox" id="touch">
+											<ul class="dropdownItem autocomplete">
+												<li class="autocomplete"><input  class="input" id="searchPickupDelivery" type="text" placeholder="Введите адрес или номер отделения"></li>
+											</ul>
+										</nav>
+										<div class="deliveryPickupInfo">
+											<dl class="deliveryPickupInfo_schedule">
+												<dt>Пн-Сб:</dt>
+												<dd>09:00-20:00</dd>
+												<dt>Вс:</dt>
+												<dd>10:00-18:00</dd>
+											</dl>
+											<div class="deliveryPickupInfo_map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5324.863254795745!2d30.491342761197167!3d50.487048664424535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdfc5a8ec63d%3A0xaba404f23589b708!2sPochaina%20Station!5e0!3m2!1sen!2sde!4v1679817498032!5m2!1sen!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="delivery_way2" name="radio-group1">
+										<label for="delivery_way2">
+										</label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Курьер по вышему адресу</p>
+												<p class="text-12-gray">Доставка завтра с</p>
+											</div>
+											<p class="deliveryPrice">98<span class="currency"></span></p>
+										</div>
+									</div>
+									<div class="variant_content">
+										<div class="courier_adress">
+											<div class="input input-width-50">
+												<p class="input_title text-12-gray">Улица</p>
+												<input type="adress" class="input">
+											</div>
+											<div class="input">
+												<p class="input_title text-12-gray">Дом</p>
+												<input type="adress" class="input">
+											</div>
+											<div class="input">
+												<p class="input_title text-12-gray">Квартира</p>
+												<input type="adress" class="input">
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="delivery_way3" name="radio-group1">
+										<label for="delivery_way3">
+										</label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Самовывоз из мобильных точек выдачи</p>
+											</div>
+											<p class="deliveryPrice free">Бесплатно</p>
+										</div>
+									</div>
+									<div class="variant_content">
+										<nav class="dropdown">
+											<label for="touch"><span>Выберите подходящее отделение</span></label>            
+											<input type="checkbox" id="touch">
+											<ul class="dropdownItem autocomplete">
+												<li class="autocomplete"><input  class="input" id="searchPickupDelivery" type="text" placeholder="Введите адрес или номер отделения"></li>
+											</ul>
+										</nav>
+										<div class="deliveryPickupInfo">
+											<div class="deliveryPickupInfo_map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5324.863254795745!2d30.491342761197167!3d50.487048664424535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdfc5a8ec63d%3A0xaba404f23589b708!2sPochaina%20Station!5e0!3m2!1sen!2sde!4v1679817498032!5m2!1sen!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
+										</div>
+
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="delivery_way4" name="radio-group1">
+										<label for="delivery_way4">
+										</label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Самовывоз из Meest</p>
+											</div>
+											<p class="deliveryPrice">48<span class="currency"></span></p>
+										</div>
+									</div>
+									<div class="variant_content">
+										<nav class="dropdown">
+											<label for="touch"><span>Выберите подходящее отделение</span></label>            
+											<input type="checkbox" id="touch">
+											<ul class="dropdownItem autocomplete">
+												<li class="autocomplete"><input  class="input" id="searchPickupDelivery" type="text" placeholder="Введите адрес или номер отделения"></li>
+											</ul>
+										</nav>
+										<div class="deliveryPickupInfo">
+											<div class="deliveryPickupInfo_map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5324.863254795745!2d30.491342761197167!3d50.487048664424535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdfc5a8ec63d%3A0xaba404f23589b708!2sPochaina%20Station!5e0!3m2!1sen!2sde!4v1679817498032!5m2!1sen!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="delivery_way5" name="radio-group1">
+										<label for="delivery_way5">
+										</label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Самовывоз из Укрпошта</p>
+											</div>
+											<p class="deliveryPrice">35<span class="currency"></span></p>
+										</div>
+									</div>
+									<div class="variant_content">
+										<nav class="dropdown">
+											<label for="touch"><span>Выберите подходящее отделение</span></label>            
+											<input type="checkbox" id="touch">
+											<ul class="dropdownItem autocomplete">
+												<li class="autocomplete"><input  class="input" id="searchPickupDelivery" type="text" placeholder="Введите адрес или номер отделения"></li>
+											</ul>
+										</nav>
+										<div class="deliveryPickupInfo">
+											<div class="deliveryPickupInfo_map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5324.863254795745!2d30.491342761197167!3d50.487048664424535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdfc5a8ec63d%3A0xaba404f23589b708!2sPochaina%20Station!5e0!3m2!1sen!2sde!4v1679817498032!5m2!1sen!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="delivery_way6" name="radio-group1">
+										<label for="delivery_way6">
+										</label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Самовывоз из новой почты</p>
+											</div>
+											<p class="deliveryPrice">55<span class="currency"></span></p>
+										</div>
+									</div>
+									<div class="variant_content">
+										<nav class="dropdown">
+											<label for="touch"><span>Выберите подходящее отделение</span></label>            
+											<input type="checkbox" id="touch">
+											<ul class="dropdownItem autocomplete">
+												<li class="autocomplete"><input  class="input" id="searchPickupDelivery" type="text" placeholder="Введите адрес или номер отделения"></li>
+											</ul>
+										</nav>
+										<div class="deliveryPickupInfo">
+											<div class="deliveryPickupInfo_map">
+												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5324.863254795745!2d30.491342761197167!3d50.487048664424535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdfc5a8ec63d%3A0xaba404f23589b708!2sPochaina%20Station!5e0!3m2!1sen!2sde!4v1679817498032!5m2!1sen!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<div class="product">
+							<div class="stepHeader">
+								<span class="step stepHeader_step">n</span>
+								<p class="text-16-white">Оплата</p>
+							</div>
+							<ul class="radioVariants">
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="pay_way1" name="radio-group2" checked>
+										<label for="pay_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Оплата при получении товара</p>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="pay_way1" name="radio-group2">
+										<label for="pay_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Оплатить сейчас</p>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="pay_way1" name="radio-group2">
+										<label for="pay_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Безналичными для юридических лиц</p>
+												<p class="text-12-gray">Оплата для юридических лиц через расчётный счёт</p>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="pay_way1" name="radio-group2">
+										<label for="pay_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Оплатить онлайн социальной картой "Пакунок малюка"</p>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="pay_way1" name="radio-group2">
+										<label for="pay_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Безналичными для физических лиц</p>
+												<p class="text-12-gray">Оплата для физических лиц через расчетный счет</p>
+											</div>
+										</div>
+									</div>
+								</li>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<li class="variant">
+									<div class="radioVariant">
+										<input type="radio" id="pay_way1" name="radio-group2">
+										<label for="pay_way1"></label>
+										<div class="radioVariant_title">
+											<div>
+												<p class="text-14-white">Кредит и оплата частями</p>
+												<p class="text-12-gray">Оформление кредитов в банках партнеров</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							
+
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<div class="product">
+								<div class="certificat">
+									<button class="buttonTransparent">
+										<p class="text-14-white">Сертификат</p>
+										<a class="buttonEdit" href="#pop-up">
+											<i class='bx bx-edit-alt'></i>
+											Редактировать
+										</a>
+									</button>
+								</div>	
+							</div>
+							
+						</form>
+					</div>
+
+				</main>
+
+
+
+
+
+
+			</body>
+			</html>

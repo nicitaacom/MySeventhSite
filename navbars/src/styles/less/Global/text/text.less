@@ -1,0 +1,30 @@
+a {
+	color:@text-white;
+	text-decoration: none;
+}
+a:hover {
+	color:@text-white;
+}
+.underlineOnHover {
+	a {
+		position: relative;
+	}
+	a::before {
+		transform-origin: 100%;
+	}
+	a::after {
+		content:'';
+		display: block;
+		width: 60%;
+		height:2px;
+		border-radius:16px;
+		transform:scaleX(0);
+		transform-origin:0%;
+		background-color:#c4c4c4;
+		transition:all 0.4s;
+	}
+	a:hover::after,
+	a.active::after {
+		transform:scaleX(1);
+	} 
+}

@@ -1,0 +1,270 @@
+/* Global Settings */
+body {
+  background-color: #202020;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+/* Colors */
+/* Text */
+/* forms buttons etc */
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #0a0a0a;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.containerNavbar {
+  max-width: 90%;
+  margin: auto;
+}
+.containerNavbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1%;
+  margin-bottom: 5%;
+  /*underline on hover*/
+}
+.containerNavbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+.containerNavbar nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.containerNavbar nav a:hover {
+  color: #ffffff;
+}
+.containerNavbar nav .navbarTitle {
+  font-size: 1.2rem;
+}
+.containerNavbar nav .auth {
+  width: 150px;
+  height: 30px;
+}
+.containerNavbar nav a {
+  position: relative;
+}
+.containerNavbar nav a::before {
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+.containerNavbar nav a::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  border-radius: 16px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  background-color: #c4c4c4;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.containerNavbar nav a:hover::after,
+.containerNavbar nav a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/* variants for forms buttons etc*/
+main {
+  min-height: 100vh;
+}
+main .active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  display: inline-block;
+}
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  max-width: 25%;
+  margin: auto;
+}
+main .authMetod {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+main .authMetod .active {
+  background-color: #0a0a0a;
+  z-index: 1;
+}
+main .authMetod ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0px auto;
+  padding: 1px;
+}
+main .authMetod ul li {
+  list-style: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: ;
+  border-radius: 22px;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(7, 7, 7, 0.4);
+  margin: 0px -10px;
+  z-index: 0;
+}
+main .authMetod ul li a {
+  cursor: inherit;
+  text-decoration: none;
+  color: #ffffff;
+}
+main .form_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+main .form_header h1 {
+  text-align: center;
+  font-family: 'Font awesome 5 Free';
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 800;
+}
+form {
+  position: relative;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  display: none;
+  width: 100%;
+}
+form .form_body .input {
+  margin-bottom: 10px;
+  position: relative;
+}
+form .form_body .input input,
+form .form_body .input textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+  padding-left: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(10, 10, 10, 0.6);
+  border-left: 2px solid rgba(10, 10, 10, 0.6);
+  border-right: 2px solid rgba(10, 10, 10, 0.6);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+form .form_body .input textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 2px solid rgba(10, 10, 10, 0.6);
+  padding: 2px;
+  height: auto;
+}
+form .form_body .input i {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  -webkit-transform: translateY(-50%) translateX(50%);
+          transform: translateY(-50%) translateX(50%);
+  z-index: 9;
+}
+form .form_body .input i:hover .tooltiptext {
+  visibility: visible;
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  z-index: 99;
+}
+form .form_body .input .tooltip .tooltiptext {
+  visibility: hidden;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -110%);
+          transform: translate(-50%, -110%);
+  font-size: 14px;
+  background-color: #0a0a0a;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 99;
+}
+form .form_body button {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+form .form_body button:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: rgba(10, 10, 10, 0.8);
+}

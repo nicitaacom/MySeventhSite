@@ -1,0 +1,142 @@
+<!-- Tasks
+1.Make payment form after registration
+2.Make checkbox required in registration form
+3.Make transition on hover effect in registration form for <a> tag "terms & conditions" -->
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hack</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.svg">
+		<!-- for checkbox -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+		<!-- for inputs -->
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<!-- Vide -->
+		<script defer src="../libraries/vide/js/jquery.vide.js"></script>
+		<!-- reset.css -->
+		<link rel="stylesheet" href="../libraries/reset/reset.css">
+		<!-- css js -->
+		<link rel="stylesheet" type="text/css" href="../styles/css/login-hack.css">
+		<script defer src="../js/login-hack.js"></script>
+	</head>
+	<body>
+
+		<main data-vide-bg='../../assets/video/hack-the-planet.mp4' data-vide-options="posterType: none">
+
+
+			<!-- Navbar -->
+			<div class="containerNavbar">
+				
+				<nav>
+
+					<div class="navbarTitle align-middle">Go trip</div>
+
+					<div class="navbarLinks">
+						<ul>
+							<li><a href="login-modern-blur.html">Blur</a></li>
+							<li><a href="login-modern.html">Modern</a></li>
+							<li><a href="team2-form.html">Gmail</a></li>
+							<li><a class="active" href="tabs.html">Hack</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<ul class="auth">
+							<li><a href="#">Sign up</a></li>
+							<li><button class="button" href="#">Login</button></li>
+						</ul>
+					</div>
+
+				</nav>
+			</div>
+
+
+			<!-- Form -->
+			<div class="container">
+				<div class="form_header">
+					<h1>Hack the planet</h1>
+				</div>
+				<div class="auth">
+					<ul>
+						<li data-key="login" class="buttonAuth active">Login</li>
+						<li data-key="register" class="buttonAuth">Register - 100$</li>
+					</ul>
+				</div>
+
+				<form class="form form-login active">
+
+					<div class="form_body">
+						<div class="input">
+							<input type="login" placeholder="Login" required>
+							<i class="bx bx-user tooltip">
+								<span class="tooltiptext">Email/phone/username</span>
+							</i>
+						</div>
+						<div class="input">
+							<input type="password" placeholder="Password" required>
+							<i class='bx bx-lock-alt tooltip'>
+								<span class="tooltiptext">Passowrd</span>
+							</i>
+						</div>
+						<div class="login_body_help">
+							<div class="remember_me">
+								<input type="checkbox">
+								<label for="rememberMe">Remember me</label>
+							</div>
+						</div>
+						<button class="button button-login">Login</button>
+					</div>
+
+				</form>
+
+				<form action="payment-form.html" class="form form-register">
+
+					<div class="form_body">
+						<div class="input">
+							<input type="login" placeholder="Username" required>
+							<i class='bx bx-user tooltip'>
+								<span class="tooltiptext" style="width:120px; transform:translate(-54%,-110%);">Nickname & login</span>
+							</i>
+						</i>
+					</div>
+					<div class="input">
+						<input type="email" placeholder="Email" required>
+						<i class='bx bx-envelope tooltip'>
+							<span class="tooltiptext">example@gmail.com<br>
+							recover & login</span>
+						</i>
+					</div>
+					<div class="input">
+						<input type="password" placeholder="Password" required>
+						<a href="https://google.com">
+							<i class='bx bx-lock-open-alt tooltip button'>
+								<span class="tooltiptext">Ex4mp13_57rong-P4ssw0rd</span>
+							</i>
+						</a>
+					</div>
+					<div class="input">
+						<input type="phone" placeholder="Phone (optional)">
+						<i class='bx bx-phone tooltip'>
+							<span class="tooltiptext" style="width:100px;">recover & 2FA</span>
+						</i>
+					</div>
+					<div class="login_body_help">
+						<div class="remember_me">
+							<input type="checkbox" id="required" required>
+							<label for="rememberMe">I agree with <a href="#">terms & conditions</a></label>
+						</div>
+					</div>
+					<button type="submit" class="button button-login">Register</button>
+				</div>
+
+			</form>
+
+		</div>
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+
+
+
+
+/* Global Settings */
+body {
+	background-color:#202020;
+	color:#ffffff;
+	font-size: 16px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* Colors */
+@text-white:#ffffff;
+@button:2030ee;
+
+
+/* Text */
+a {
+	color:@text-white;
+	text-decoration: none;
+}
+a:hover {
+	color:@text-white;
+}
+.underlineOnHover {
+	a {
+		position: relative;
+	}
+	a::before {
+		transform-origin: 100%;
+	}
+	a::after {
+		content:'';
+		display: block;
+		width: 60%;
+		height:2px;
+		border-radius:16px;
+		transform:scaleX(0);
+		transform-origin:0%;
+		background-color:#c4c4c4;
+		transition:all 0.4s;
+	}
+	a:hover::after,
+	a.active::after {
+		transform:scaleX(1);
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* forms buttons etc */
+.visible {
+	display: flex !important;
+}
+.containerNavbar {
+	max-width: 90%;
+	margin:auto;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top:1%;
+	margin-bottom: 5%;
+}
+.navbarTitle {
+	font-size: 1.2rem;
+}
+.navbarLinks  {
+	ul {
+		display: flex;
+		gap:20px;
+		align-items: center;
+		list-style: none;
+		padding-left: 0%;
+		margin-bottom: 0%;
+	}
+}
+
+.authMethod {
+	display: flex;
+	gap:20px;
+	align-items: center;
+	list-style: none;
+	padding-left: 0%;
+	margin-bottom: 0%;
+}
+
+
+.button {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	padding:8px 16px;
+	cursor: pointer;
+	border-radius:8px;
+	border:none;
+	color:#ffffff;
+	font-size: 16px;
+	font-weight: 500;
+	background-color: @button;
+	transition: all 0.2s;
+}
+.button:hover {
+	filter: brightness(90%);
+}
+
+/* variants for forms buttons etc*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+
+}
+
+
+
+@media (max-width: 766px) {
+	
+	.navbar {
+		.navbarLinks {
+			display: none;
+		}
+		.bx-dots-vertical-rounded {
+			cursor: pointer;
+		}
+		.authMethod {
+			margin-right: 20px;
+		}
+		.authMobile {
+			display: none;
+			position: absolute;
+			flex-flow: column;
+			padding: 0.6em;
+			background-color: rgba(55,55,55,0.4);
+			border-radius:0.5em;
+			width:170px;
+			height: auto;
+			margin-top: 10px;
+			gap:0px;
+			li {
+				width: 100%;
+				height: 30px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-bottom:1px solid #404040;
+				transition:all 0.2s;
+			}
+			li:hover{
+				cursor: pointer;
+				background-color: #505050;
+				a {
+				margin-bottom: 10px;
+				transition:all 0.2s;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 766px) {
+	.navbar {
+		.authMobile {
+			display: none;
+		}
+		.bx-dots-vertical-rounded {
+			display: none;
+			cursor: pointer;
+		}
+	}
+}
+// https://youtu.be/FHPbZa9bPso?list=LL&t=886 https://www.youtube.com/watch?v=ewVt15CnGuA&list=LL&index=12&ab_channel=BassNation

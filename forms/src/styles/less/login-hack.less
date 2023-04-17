@@ -1,0 +1,346 @@
+
+
+
+
+/* Global Settings */
+body {
+	background-color:#202020;
+	color:#ffffff;
+	font-size: 16px;
+	font-family: 'Arial', sans-serif;
+}
+
+/* Colors */
+@text-white:#ffffff;
+@form:rgba(42,167,192,1);
+@form-hover:rgba(42,167,192,0.8);
+@form-opacity:rgba(42,167,192,0.6);
+@form-button-unactive:rgba(11,67,77,0.4);
+
+
+/* Text */
+
+
+/* forms buttons etc */
+.button {
+	display: flex;
+	margin: auto;
+	padding:8px 16px;
+	cursor: pointer;
+	border-radius:4px;
+	border:1px solid @form;
+	color:@text-white;
+	font-size: 16px;
+	font-weight: 500;
+	background-color:transparent;
+}
+
+.containerNavbar {
+	max-width: 90%;
+	margin:auto;
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top:1%;
+		margin-bottom: 5%;
+		ul {
+			display: flex;
+			gap:20px;
+			align-items: center;
+			list-style: none;
+			padding-left: 0%;
+			margin-bottom: 0%;
+		}
+		a {
+			color:@text-white;
+			text-decoration: none;
+		}
+		a:hover {
+			color:@text-white;
+		}
+		.navbarTitle {
+			font-size: 1.2rem;
+		}
+		.auth {
+			width: 150px;
+			height: 30px;
+		}
+		/*underline on hover*/
+		a {
+			position: relative;
+		}
+		a::before {
+			transform-origin: 100%;
+		}
+		a::after {
+			content:'';
+			display: block;
+			width: 60%;
+			height:2px;
+			border-radius:16px;
+			transform:scaleX(0);
+			transform-origin:0%;
+			background-color:#c4c4c4;
+			transition:all 0.4s;
+		}
+		a:hover::after,
+		a.active::after {
+			transform:scaleX(1);
+		} 
+	}
+
+}
+/* variants for forms buttons etc*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+	min-height: 100vh;
+	.container {
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		margin:auto;
+		.active {
+			transform:scale(1);
+			display: inline-block;
+		}
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items:center;
+		padding: 0px 10px 30px;
+		width:35%;
+		min-height:20vh;
+		border:2px solid @form-opacity;
+		border-radius:16px;
+		background-color: rgba(0,0,0,0.4);
+		overflow: hidden;
+		.form_header {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height:40px;
+			width: calc( 100% + 10);
+			border-bottom:2px solid @form-opacity;
+			padding: 10px 0px;
+			margin-bottom: 20px;
+			h1 {
+				text-align: center;
+				font-family: 'Font awesome 5 Free';
+				text-transform: uppercase;
+				font-size: 24px;
+				font-weight: 800;
+			}
+		}
+	}
+	.auth {
+		position: relative;
+		width:80%;
+		margin-bottom: 10px;
+		z-index: 0;
+		.active {
+			background-color: @form;
+			z-index: 1;
+		}
+		ul {
+			display: flex;
+			width: 80%;
+			margin: 0px auto;
+			padding: 1px;
+			li {
+				list-style: none;
+				transition: 0.2s;
+				background-color:;
+				border-radius:22px;
+				padding: 10px 5px;
+				text-align: center;
+				width:100%;
+				cursor:pointer;
+				background-color: @form-button-unactive;
+				margin: 0px -10px;
+				z-index: 0;
+				a {
+					cursor:inherit;
+					text-decoration: none;
+					color:@text-white;
+				}
+			}
+		}
+	}
+	form {
+		position: relative;
+		width: 80%;
+		transform:scale(0);
+		display: none;
+		.form_body {
+			.input {
+				margin-bottom: 10px;
+				position: relative;
+				input {
+					width: 100%;
+					height:30px;
+					background-color: transparent;
+					color:@text-white;
+					border:none;
+					outline: none;
+					border-bottom:2px solid @form;
+				}
+				i {
+					font-size: 18px;
+					position: absolute;
+					top: 50%;
+					right:10px;
+					transform: translateY(-50%) translateX(50%);
+					z-index: 9;
+				}
+				i:hover .tooltiptext {
+					visibility: visible;
+					width: auto;
+					height:auto;
+					padding: 5px 10px;
+					z-index: 99;
+				}
+				.button {
+					cursor:pointer;
+					text-decoration: none;
+					color:@text-white;
+					font-size: 18px;
+					position: absolute;
+					top: 50%;
+					right:10px;
+					transform: translateY(-50%) translateX(50%);
+					z-index: 9;
+					border:none;
+				}
+				.tooltip .tooltiptext {
+					visibility: hidden;
+					position: absolute;
+					top:0;
+					left:50%;
+					transform:translate(-50%,-110%);
+					font-size: 14px;
+					background-color: @form;
+					text-align: center;
+					border-radius: 6px;
+					padding: 5px 0;
+					position: absolute;
+					z-index: 99;
+				}
+			}
+			.login_body_help {
+				margin-bottom: 20px;
+				.remember_me {
+					display: flex;
+					input[type="checkbox"] {
+						appearance:none;
+						-webkit-appearance:0;
+						height:15px;
+						width: 15px;
+						background: #8c8c8c;
+						border-radius:2px;
+				  // To set checked at center
+				  display: flex;
+				  align-items: center;
+				  justify-content: center;
+				}
+				input[type="checkbox"]::after {
+					content:"\f00c";
+					font-family: "Font awesome 5 Free";
+					font-weight: 900;
+					font-size:12px;
+					color:#000000;
+				}
+				input[type="checkbox"]:not(:checked)::after {
+					display: none;
+				}
+				input[type="checkbox"]:not(:checked) {
+					background-color:  @form;
+				}
+				input[type="checkbox"]:not(:checked):hover {
+					background-color:  @form-hover;
+				}
+				input[type="checkbox"]:not(:checked):active {
+					background-color:  @form-opacity;
+				}
+				input[type="checkbox"]:checked {
+					background-color: @form-opacity;
+				}
+				input[type="checkbox"]:checked:hover {
+					background-color: @form-hover;
+				}
+				input[type="checkbox"]:checked:active {
+					background-color: @form;
+				}
+				input[type="checkbox"]:checked::after {
+					display: flex;
+				}
+				label {
+					margin-top: 3px;
+				}
+				a {
+					position: relative;
+					text-decoration: none;
+					color:@form;
+					font-size: 14px;
+				}
+				a::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 0.75px;
+					background-color: @form;
+					opacity: 0;
+					transition: 0.8s;
+				}
+				a:hover::after {
+					opacity: 1;
+				}
+			}
+		}
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			height: 40px;
+			border-radius: 16px;
+			font-size: 16px;
+			font-weight: 700;
+			background-color: @form;
+			color:@text-white;
+			border:none;
+			margin:0px 10%; //I understand that it not right but "auto" isn't working
+			transition: all 0.2s;
+		}
+		button:hover {
+			transition: all 0.2s;
+			cursor: pointer;
+			background-color: @form-hover;
+		}
+	}
+}
+}

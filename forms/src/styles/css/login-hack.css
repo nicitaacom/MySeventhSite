@@ -1,0 +1,365 @@
+/* Global Settings */
+body {
+  background-color: #202020;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+/* Colors */
+/* Text */
+/* forms buttons etc */
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #2aa7c0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+}
+.containerNavbar {
+  max-width: 90%;
+  margin: auto;
+}
+.containerNavbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1%;
+  margin-bottom: 5%;
+  /*underline on hover*/
+}
+.containerNavbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0%;
+  margin-bottom: 0%;
+}
+.containerNavbar nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.containerNavbar nav a:hover {
+  color: #ffffff;
+}
+.containerNavbar nav .navbarTitle {
+  font-size: 1.2rem;
+}
+.containerNavbar nav .auth {
+  width: 150px;
+  height: 30px;
+}
+.containerNavbar nav a {
+  position: relative;
+}
+.containerNavbar nav a::before {
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+.containerNavbar nav a::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  border-radius: 16px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  background-color: #c4c4c4;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.containerNavbar nav a:hover::after,
+.containerNavbar nav a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/* variants for forms buttons etc*/
+main {
+  min-height: 100vh;
+}
+main .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px 30px;
+  width: 35%;
+  min-height: 20vh;
+  border: 2px solid rgba(42, 167, 192, 0.6);
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+main .container .active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  display: inline-block;
+}
+main .container .form_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: calc(110%);
+  border-bottom: 2px solid rgba(42, 167, 192, 0.6);
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+main .container .form_header h1 {
+  text-align: center;
+  font-family: 'Font awesome 5 Free';
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 800;
+}
+main .auth {
+  position: relative;
+  width: 80%;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+main .auth .active {
+  background-color: #2aa7c0;
+  z-index: 1;
+}
+main .auth ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0px auto;
+  padding: 1px;
+}
+main .auth ul li {
+  list-style: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: ;
+  border-radius: 22px;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(11, 67, 77, 0.4);
+  margin: 0px -10px;
+  z-index: 0;
+}
+main .auth ul li a {
+  cursor: inherit;
+  text-decoration: none;
+  color: #ffffff;
+}
+main form {
+  position: relative;
+  width: 80%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  display: none;
+}
+main form .form_body .input {
+  margin-bottom: 10px;
+  position: relative;
+}
+main form .form_body .input input {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #2aa7c0;
+}
+main form .form_body .input i {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%) translateX(50%);
+          transform: translateY(-50%) translateX(50%);
+  z-index: 9;
+}
+main form .form_body .input i:hover .tooltiptext {
+  visibility: visible;
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  z-index: 99;
+}
+main form .form_body .input .button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%) translateX(50%);
+          transform: translateY(-50%) translateX(50%);
+  z-index: 9;
+  border: none;
+}
+main form .form_body .input .tooltip .tooltiptext {
+  visibility: hidden;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -110%);
+          transform: translate(-50%, -110%);
+  font-size: 14px;
+  background-color: #2aa7c0;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 99;
+}
+main form .form_body .login_body_help {
+  margin-bottom: 20px;
+}
+main form .form_body .login_body_help .remember_me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: 0;
+  height: 15px;
+  width: 15px;
+  background: #8c8c8c;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]::after {
+  content: "\f00c";
+  font-family: "Font awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #000000;
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:not(:checked)::after {
+  display: none;
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:not(:checked) {
+  background-color: #2aa7c0;
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:not(:checked):hover {
+  background-color: rgba(42, 167, 192, 0.8);
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:not(:checked):active {
+  background-color: rgba(42, 167, 192, 0.6);
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:checked {
+  background-color: rgba(42, 167, 192, 0.6);
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:checked:hover {
+  background-color: rgba(42, 167, 192, 0.8);
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:checked:active {
+  background-color: #2aa7c0;
+}
+main form .form_body .login_body_help .remember_me input[type="checkbox"]:checked::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main form .form_body .login_body_help .remember_me label {
+  margin-top: 3px;
+}
+main form .form_body .login_body_help .remember_me a {
+  position: relative;
+  text-decoration: none;
+  color: #2aa7c0;
+  font-size: 14px;
+}
+main form .form_body .login_body_help .remember_me a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.75px;
+  background-color: #2aa7c0;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+main form .form_body .login_body_help .remember_me a:hover::after {
+  opacity: 1;
+}
+main form .form_body button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 40px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #2aa7c0;
+  color: #ffffff;
+  border: none;
+  margin: 0px 10%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+main form .form_body button:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: rgba(42, 167, 192, 0.8);
+}

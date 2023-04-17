@@ -1,0 +1,426 @@
+@font-face {
+  font-family: 'Nerd-reg';
+  src: url('../../../assets/fonts/Nerd-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppnis-bold';
+  src: url('../../../assets/fonts/Poppins-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Global Settings */
+body {
+  background-color: #202020;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: '', sans-serif;
+}
+/* Colors */
+/* Text */
+/* forms buttons etc */
+.button {
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px;
+}
+.footer {
+  margin: 0 auto 0;
+  padding: 30px 10%;
+}
+/* variants for forms buttons etc*/
+main {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../../../assets/img/background.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../assets/img/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Navbar */
+  /* Form */
+}
+main nav ul {
+  list-style: none;
+  padding-left: 0%;
+  margin-bottom: 0%;
+}
+main nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+main nav a:hover {
+  color: #ffffff;
+}
+main nav .navbar_links {
+  /*underline on hover*/
+}
+main nav .navbar_links ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main nav .navbar_links a {
+  position: relative;
+}
+main nav .navbar_links a::before {
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+main nav .navbar_links a::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  border-radius: 12px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  background-color: #c4c4c4;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main nav .navbar_links a:hover::after,
+main nav .navbar_links a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+main nav .navbar_links button {
+  color: #ffffff;
+  padding: 15px 40px;
+  background-color: transparent;
+  border: 1px solid #e4edf2;
+  border-radius: 12px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-family: 'Poppnis-bold', sans-serif;
+  font-weight: bold;
+}
+main nav .navbar_links button:hover {
+  background-color: rgba(228, 237, 242, 0.6);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid rgba(71, 100, 108, 0.6);
+  min-height: 60vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: transparent;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  width: 30%;
+  height: auto;
+  border-radius: 16px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+main .active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+main .icon-close {
+  color: #ffffff;
+  background-color: #47646c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom-left-radius: 16px;
+  cursor: pointer;
+}
+main form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4% 2%;
+  width: 90%;
+}
+main form .form_header {
+  text-align: center;
+}
+main form .form_header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #47646c;
+  font-family: 'Poppnis-bold', sans-serif;
+  font-weight: bold;
+}
+main form .form_body .input {
+  margin-bottom: 10px;
+  position: relative;
+}
+main form .form_body .input input {
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  border-radius: 16px;
+  border: none;
+  border-bottom: 3px solid #47646c;
+  height: 45px;
+  padding: 6px 10px 5px 14px;
+}
+main form .form_body .input input:focus {
+  outline: none;
+}
+main form .form_body .input input:focus ~ label,
+main form .form_body .input input:valid ~ label {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  top: 0;
+}
+main form .form_body .input label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 4%;
+  font-size: 16px;
+  pointer-events: none;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+main form .form_body .input i {
+  color: #47646c;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 12px;
+  font-size: 20px;
+}
+main form .form_body .login_body_options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+main form .form_body .login_body_options .remember_me,
+main form .form_body .login_body_options .agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #47646c;
+}
+main form .form_body .login_body_options input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  -webkit-appearance: 0;
+  height: 15px;
+  width: 15px;
+  margin: 0px 5px 0px 3px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 3px #000000;
+          box-shadow: 1px 1px 3px #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main form .form_body .login_body_options input[type="checkbox"]::after {
+  content: "\f00c";
+  font-family: "Font awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  color: #000000;
+}
+main form .form_body .login_body_options input[type="checkbox"]:not(:checked)::after {
+  display: none;
+}
+main form .form_body .login_body_options input[type="checkbox"]:not(:checked) {
+  background-color: #47646c;
+}
+main form .form_body .login_body_options input[type="checkbox"]:not(:checked):hover {
+  background-color: rgba(71, 100, 108, 0.8);
+}
+main form .form_body .login_body_options input[type="checkbox"]:not(:checked):active {
+  background-color: rgba(71, 100, 108, 0.6);
+}
+main form .form_body .login_body_options input[type="checkbox"]:checked {
+  background-color: rgba(71, 100, 108, 0.6);
+}
+main form .form_body .login_body_options input[type="checkbox"]:checked:hover {
+  background-color: rgba(71, 100, 108, 0.8);
+}
+main form .form_body .login_body_options input[type="checkbox"]:checked:active {
+  background-color: #47646c;
+}
+main form .form_body .login_body_options input[type="checkbox"]:checked::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main form .form_body .login_body_options a {
+  color: #47646c;
+  text-decoration: none;
+}
+main form .form_body .login_body_options a:hover {
+  -webkit-text-decoration: underline 0.5px;
+          text-decoration: underline 0.5px;
+}
+main form .form_body .login_body_options .forgotPassowrd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: right;
+  /*underline on hover*/
+}
+main form .form_body .login_body_options .forgotPassowrd a {
+  color: #47646c;
+  position: relative;
+  text-decoration: none;
+}
+main form .form_body .login_body_options .forgotPassowrd a::before {
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+main form .form_body .login_body_options .forgotPassowrd a::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 1px;
+  border-radius: 12px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  background-color: #47646c;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main form .form_body .login_body_options .forgotPassowrd a:hover::after,
+main form .form_body .login_body_options .forgotPassowrd a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+main form button {
+  color: #ffffff;
+  background-color: #47646c;
+  width: 100%;
+  margin: 0px auto 10px;
+  border-radius: 16px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-family: 'Poppnis-bold', sans-serif;
+  font-weight: bold;
+}
+main form button:hover {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: rgba(71, 100, 108, 0.8);
+  -webkit-box-shadow: 1px 1px 5px #000000;
+          box-shadow: 1px 1px 5px #000000;
+}
+main form .sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  /*underline on hover*/
+}
+main form .sign a {
+  color: #47646c;
+  text-decoration: none;
+  font-family: 'Poppnis-bold', sans-serif;
+  font-weight: bold;
+}
+main form .sign a {
+  position: relative;
+}
+main form .sign a::before {
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+main form .sign a::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 1px;
+  border-radius: 12px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  background-color: #47646c;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main form .sign a:hover::after,
+main form .sign a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.form-register {
+  position: absolute;
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.form-register.active {
+  position: absolute;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.form-login {
+  position: absolute;
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.form-login.active {
+  position: absolute;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
